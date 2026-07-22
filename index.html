@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akash G.K — Finance &amp; FinTech</title>
 <meta name="description" content="Finance professional bridging US accounting and audit with financial technology — incoming MSc FinTech, University of Strathclyde.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Akash G.K — Finance & FinTech">
+<meta property="og:description" content="Finance professional bridging US accounting and audit with financial technology — incoming MSc FinTech, University of Strathclyde. Open to part-time and project-based work in Glasgow from Sept 2026.">
+<meta property="og:site_name" content="Akash G.K Portfolio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Akash G.K — Finance & FinTech">
+<meta name="twitter:description" content="Finance professional bridging US accounting and audit with financial technology — incoming MSc FinTech, University of Strathclyde.">
+<!-- Once hosted, add: <meta property="og:image" content="https://your-live-url/preview-image.png"> — needs a real public URL, a local/data image won't work for link previews. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -44,6 +52,15 @@ h1 em,h2 em{font-weight:500;font-style:italic;color:var(--accent)}
 .hero-card{padding:27px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);box-shadow:var(--shadow)}
 .hero-card-line{height:1px;background:var(--line);margin:22px 0}
 .hero-degree{font-size:1.3rem;font-weight:700;line-height:1.25;margin-bottom:12px}
+.avatar-initials{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#174b5c);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"DM Mono",monospace;font-weight:500;font-size:1.1rem;flex-shrink:0}
+.testimonial-card{background:var(--surface);border:1px solid var(--line);padding:32px;position:relative}
+.testimonial-quote{font-size:1.15rem;line-height:1.55;color:var(--ink);margin-bottom:22px;font-family:"Manrope",sans-serif}
+.testimonial-quote::before{content:'"';color:var(--accent);font-size:1.4em;font-weight:800;margin-right:2px}
+.testimonial-quote::after{content:'"';color:var(--accent);font-size:1.4em;font-weight:800;margin-left:2px}
+.testimonial-person{display:flex;align-items:center;gap:14px}
+.testimonial-name{font-weight:700;font-size:.98rem}
+.testimonial-role{color:var(--muted);font-size:.82rem;margin-top:2px}
+.testimonial-source{font-family:"DM Mono",monospace;font-size:.68rem;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
 .muted{color:var(--muted)}
 .availability{display:flex;align-items:center;gap:8px;margin-top:27px;color:var(--accent);font:500 .72rem "DM Mono",monospace}
 .availability span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--accent-soft)}
@@ -163,9 +180,15 @@ h1 em,h2 em{font-weight:500;font-style:italic;color:var(--accent)}
           <a class="button button-secondary" href="#projects">View projects</a>
         </div>
         <div class="availability"><span></span>Open to part-time &amp; project-based work in Glasgow, from Sept 2026</div>
+        <p class="muted" style="margin-top:14px;font-size:.9rem;"><strong style="color:var(--ink);">Now:</strong> building Python &amp; SQL skills for financial data analysis, preparing for MSc FinTech at Strathclyde.</p>
       </div>
       <div class="hero-card">
-        <p class="eyebrow" style="margin-bottom:10px;">Incoming</p>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+          <div class="avatar-initials">AG</div>
+          <div>
+            <p class="eyebrow" style="margin:0;">Incoming</p>
+          </div>
+        </div>
         <div class="hero-degree">MSc Financial Technology<br>University of Strathclyde</div>
         <div class="hero-card-line"></div>
         <p class="muted">Dean's Excellence Scholar<br>Glasgow, UK · Sept 2026</p>
@@ -181,7 +204,7 @@ h1 em,h2 em{font-weight:500;font-style:italic;color:var(--accent)}
       <div class="body-large">
         <p>I'm <strong>Akash G.K</strong>, a finance professional based in Chennai, currently working in US accounting and payroll compliance at Finstein Advizory Services, with a background built through statutory audit engagements at Sundaram &amp; Srinivasan and freelance audit work with Grant Thornton and Protiviti on clients including Axis Bank, DBS Bank, Bhushan Steel and Lenskart.</p>
         <p>Alongside my full-time role, I completed a part-time investment banking internship at LaunchED Global, building financial models and company valuations using DCF and comparable company analysis on live case studies.</p>
-        <p>This September, I'm relocating to Glasgow to begin an MSc in Financial Technology at the University of Strathclyde as a Dean's Excellence Scholar bridging my audit and compliance background with data, Python, and the tools driving modern financial services.</p>
+        <p>This September, I'm relocating to Glasgow to begin an MSc in Financial Technology at the University of Strathclyde as a Dean's Excellence Scholar — bridging my audit and compliance background with data, Python, and the tools driving modern financial services.</p>
       </div>
     </div>
   </section>
@@ -274,7 +297,7 @@ h1 em,h2 em{font-weight:500;font-style:italic;color:var(--accent)}
       <a href="https://www.linkedin.com/in/gkakash25" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
-  <div class="container"><p>© <span id="year"></span> Akash G.K. Built with care ahead of Glasgow.</p></div>
+  <div class="container"><p>© <span id="year"></span> Akash G.K</p></div>
 </footer>
 
 <div class="modal-overlay" id="modalOverlay">
@@ -360,6 +383,13 @@ const modalContent = document.getElementById('modalContent');
 function openProject(id){
   const p = projects.find(x => x.id === id);
   if (!p) return;
+  const keyOutputsHtml = p.keyOutputs ? `
+    <div class="modal-eyebrow-block">
+      <h3>Key Outputs</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:.95rem;line-height:1.7;">
+        ${p.keyOutputs.map(k => `<li>${escapeHtml(k)}</li>`).join('')}
+      </ul>
+    </div>` : '';
   modalContent.innerHTML = `
     <div class="modal-visual">${escapeHtml(p.visualLabel)}</div>
     <p class="eyebrow">${escapeHtml(p.category)} / Case study</p>
@@ -369,6 +399,7 @@ function openProject(id){
       <dt>Skills</dt><dd>${escapeHtml(p.skills.join(' · '))}</dd>
     </dl>
     <div class="modal-eyebrow-block"><h3>Overview</h3><p>${escapeHtml(p.overview)}</p></div>
+    ${keyOutputsHtml}
     <div class="modal-eyebrow-block"><h3>Approach</h3><p>${escapeHtml(p.approach)}</p></div>
     <div class="modal-eyebrow-block"><h3>Outcome</h3><p>${escapeHtml(p.outcome)}</p></div>
   `;
